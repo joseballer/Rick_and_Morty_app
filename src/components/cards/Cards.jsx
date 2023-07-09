@@ -1,7 +1,7 @@
-import Card from "../components/Card";
+import Card from "../card/Card";
 const Cards = ({ characters, onClose}) => {
   return (
-    <div >
+    <div>
       {characters.map((character) => (
         <Card
           id={character.id}

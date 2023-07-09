@@ -1,0 +1,30 @@
+.container {
+    
+    width: 300px;
+    height: auto;
+    background-color: #c5c5c5a2;
+    padding: 1em;
+    border-radius: 10px;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  .container:hover {
+    background-color: #262623c9;
+    color: beige;
+  }
+  
+  .cardImg {
+    width: 50%;
+    object-fit: cover;
+    margin: 15px;
+  }
+.closeButton{
+    background-color: red;
+    color: aliceblue;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 50%;
+}
