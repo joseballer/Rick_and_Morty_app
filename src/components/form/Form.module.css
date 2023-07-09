@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+    padding-top: 4em;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.form{
+    
+    background-color:#00b7c2;
+    height: 300px;
+    width: 96%;
+    justify-content:center;
+
+
+
+}
+
+.email{
+    background-color: blue;
+
+}
