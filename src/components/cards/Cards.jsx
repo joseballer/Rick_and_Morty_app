@@ -9,6 +9,7 @@ const Cards = ({ characters, onClose}) => {
           status={character.status}
           species={character.species}
           gender={character.gender}
+          origin={character.origin.name}
           image={character.image}
           onClose={onClose}
         />

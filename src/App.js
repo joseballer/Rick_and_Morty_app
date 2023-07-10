@@ -4,16 +4,18 @@ import Cards from "./components/cards/Cards";
 import About from "./components/about/About";
 import Detail from "./components/detail/Detail";
 import Form from "./components/form/Form";
+import Favorites from "./components/favorites/Favorites";
 import { useState, useEffect } from "react";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function App() {
   const [characters, setCharacters] = useState([]);
   const navigate = useNavigate();
   const [access, setAccess] = useState(false);
-  const EMAIL = "ejemplo@gmail.com";
+  const EMAIL = "email@email.com";
   const PASSWORD = "1Password";
-
+  const URL = "https://rickandmortyapi.com/api/character";
   useEffect(() => {
     !access && navigate("/");
   }, [access]);
@@ -25,16 +27,18 @@ function App() {
   };
 
   const onSearch = (id) => {
-    fetch(`https://rickandmortyapi.com/api/character/${id}`)
-      .then((res) => res.json())
-      .then((data) => {
+    axios(`${URL}/${id}`)
+      .then(({ data }) => {
         if (characters.find((char) => char.id === data.id)) {
           return window.alert("¡Ya has elegido este personaje!");
         } else if (data.name) {
-          setCharacters((oldChars) => [...oldChars, data]);
+          setCharacters([...characters, data]);
         } else {
-          alert("¡Personaje no encontrado!");
+          window.alert("No se encontro el personaje");
         }
+      })
+      .catch((err) => {
+        window.alert("Este id no existe");
       });
   };
 
@@ -53,6 +57,7 @@ function App() {
         />
         <Route path="/about" element={<About />} />
         <Route path="/detail/:id" element={<Detail />} />
+        <Route path="/favorites" element={<Favorites onClose={onClose}/>} />
       </Routes>
     </div>
   );
