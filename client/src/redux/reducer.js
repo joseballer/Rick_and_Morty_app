@@ -13,7 +13,7 @@ const rootReducer = (state = initialState, { type, payload }) => {
     case REMOVE_FAV:
       return {
         ...state,
-        myFavorites: payload,
+        allCharacters: payload,
       };
     case FILTER:
       const filterByGender = state.allCharacters.filter(
