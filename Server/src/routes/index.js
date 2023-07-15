@@ -1,12 +1,15 @@
-const { Router } = require("express")
+
+const { Router } = require("express");
 const router = Router();
 const login = require("../controllers/login");
 const { postFav, deleteFav } = require("../controllers/handleFavorites");
 const getCharById = require("../controllers/getCharById");
 
+//routes and handeler functions
 router.get("/character/:id", getCharById);
 router.get("/login", login);
-router.post("/fav", postFav);
-router.delete("/fav/:id", deleteFav);
+router.post("/favorites", postFav);
+router.delete("/favorites/:id", deleteFav);
+
 
 module.exports = router;
