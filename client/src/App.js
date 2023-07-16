@@ -62,11 +62,11 @@ function App() {
   const onSearch = async (id) => {
     try {
       // Realizamos una solicitud GET a la URL con el ID especificado
-      const {data} = await axios(`${URL}/character/${id}`);
+      const { data } = await axios(`${URL}/character/${id}`);
       // Verificamos si el personaje ya está presente en el arreglo characters
       if (characters.find((char) => char.id === data.id)) {
         // Si el personaje ya está presente, mostramos una alerta
-        window.alert("¡Ya has elegido este personaje!");
+        return window.alert("¡Ya has elegido este personaje!");
       } else if (data.name) {
         // Si el objeto de respuesta tiene una propiedad name, agregamos el personaje al arreglo characters
         setCharacters([...characters, data]);

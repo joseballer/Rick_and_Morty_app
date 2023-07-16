@@ -4,12 +4,14 @@ import style from "./Nav.module.css";
 
 const Nav = ({ onSearch }) => {
   return (
-    <div className={style.container}>
+    <nav className={style.navContainer}>
+      <div className={style.linksContainer}>
+        <div className={style.link}><Link to="/home">Home</Link></div>
+        <div className={style.link}><Link to="/about">About</Link></div>
+        <div className={style.link}><Link to="/favorites">Favorites</Link></div>
+      </div>
       <SearchBar onSearch={onSearch} />
-      <Link to='/home'> Home</Link>
-      <Link to='/about'> About</Link>
-      <Link to='/favorites'> Favorites</Link>
-    </div>
+    </nav>
   );
 };
 

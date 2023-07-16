@@ -1,4 +1,20 @@
-.container{
-    background-color: aquamarine;
+.navContainer {
+  position: sticky;
+  display: flex;
+  background-color: #b5edfe;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  top: 0;
 }
 
+.linksContainer {
+  display:flex;
+  width: 50%;
+  justify-content: space-between;
+  margin-left: 10%;
+  color: white;
+}
+Link{
+    text-decoration: none;
+}

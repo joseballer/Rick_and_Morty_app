@@ -1,22 +1,47 @@
+
+body{
+    background-image:url(../../../asset/rick-and-morty-unamused-rick-agpuysmhk3lhdl4p.jpg);
+    text-decoration: none;
+}
+
 .container{
-    display: flex;
+    margin-top: 8%;
+    display: flexbox;
+    justify-content: center;
     padding-top: 4em;
-    margin-left: 5%;
-    margin-right: 5%;
+    padding-bottom: 4em;
+   
 }
-
-.form{
+p{
+    font-size: xx-large;
     
-    background-color:#00b7c2;
-    height: 300px;
-    width: 96%;
+}
+.form{
+   
+    background-color:#99F0DD;
+    height: 500px;
+    width: 30%;
+    min-width: 200px;
+    padding-top: 10em;
     justify-content:center;
-
-
-
-}
-
-.email{
-    background-color: blue;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
 
 }
+input{
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+}
+ button {
+    border : none;
+    border-radius: 10px;
+    height: 30px;
+    width: 150px;
+    background-color:#385170;
+    color: white;
+ }
+ .input p{
+    font-size: small;
+ }
